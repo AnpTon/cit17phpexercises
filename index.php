@@ -14,12 +14,12 @@
         <li><a href="temp.php"> Temperature Converter</a></li>
         <li><a href="swap.php"> Swapping Variables</a></li>
         <li><a href="salary.php"> Salary Calculator</a></li>
-        <li><a href=""> BMI Calculator</a></li>
-        <li><a href=""> String Manipulation</a></li>
-        <li><a href=""> Bank Account Simulation</a></li>
-        <li><a href=""> Simple Grading System</a></li>
-        <li><a href=""> Currency Converter</a></li>
-        <li><a href=""> Travel Cost Estimator</a></li>
+        <li><a href="bmi.php"> BMI Calculator</a></li>
+        <li><a href="string.php"> String Manipulation</a></li>
+        <li><a href="account.php"> Bank Account Simulation</a></li>
+        <li><a href="grades.php"> Simple Grading System</a></li>
+        <li><a href="currency.php"> Currency Converter</a></li>
+        <li><a href="travel.php"> Travel Cost Estimator</a></li>
 
     </ul>
 </body>
