@@ -6,8 +6,14 @@
     <title>Document</title>
 </head>
 <body>
+    <form method="post" action="">
+        <label>Type a sentence:</label><br>
+        <input name="string" type="text"><br>
+        <button type="submit">Submit</button> <br>
+    </form>
     <?php
-        $sentence = "My name is Ton-od, Andrei Nash";
+        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        $sentence = $_POST["string"];
         $char_count = strlen($sentence);
         $word_count = str_word_count($sentence);
         $uppercase_sentence = strtoupper($sentence);
@@ -18,6 +24,9 @@
         echo "It has $word_count words","<br>";
         echo "In uppercase, it becomes: $uppercase_sentence","<br>";
         echo "In lowercase, it becomes: $lowercase_sentence";
+        } else{
+            echo "Input a Sentence";
+        }
     ?>
 </body>
 </html>

@@ -6,10 +6,20 @@
     <title>Document</title>
 </head>
 <body>
+    <form method="post" action="">
+        <label>Grade in Math:</label><br>
+        <input name="Math" type="number" step="0.01"><br>
+        <label>Grade in English:</label><br>
+        <input name="English" type="number" step="0.01"><br>
+        <label>Grade in Science:</label><br>
+        <input name="Science" type="number" step="0.01"><br>
+        <button type="submit">Submit</button>
+    </form>   
     <?php
-        $math = 85;
-        $english = 90;
-        $science = 87;
+        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        $math = $_POST["Math"];
+        $english = $_POST["English"];
+        $science = $_POST["Science"];
         $average = ($math + $english + $science) / 3;
 
         if ($average >= 90) {
@@ -29,6 +39,9 @@
         echo "The Science score is $science","<br>";
         echo "The average score is $average","<br>";
         echo "The final grade is $grade";
+    }else{
+        echo "Input Values";
+    }
     ?>
 </body>
 </html>

@@ -6,8 +6,14 @@
     <title>Document</title>
 </head>
 <body>
+    <form method="post" action="">
+        <label>Amount(PHP):</label><br>
+        <input name="amount" type="number" step="0.01"><br>
+        <button type="submit">Submit</button> <br>
+    </form>
     <?php
-        $amountphp = 10000;
+        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        $amountphp = $_POST["amount"];
         $usd = 0.017;
         $eur = 0.015;
         $jpy = 2.58;
@@ -20,6 +26,9 @@
         echo "The equivalent amount in USD is $$amountusd","<br>";
         echo "The equivalent amount in EUR is €$amounteur","<br>";
         echo "The equivalent amount in JPY is ¥$amountjpy";
+        } else{
+            echo "Input Values";
+        }
     ?>
 </body>
 </html>
