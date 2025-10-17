@@ -6,14 +6,25 @@
     <title>Document</title>
 </head>
 <body>
+    <form method="post" action="">
+        <label>Your weight(kg):</label><br>
+        <input name="weight" type="number" step="0.01"><br>
+        <label>Your height(meters):</label><br>
+        <input name="height" type="number" step="0.01"><br>
+        <button type="submit">Submit</button>
+    </form>
     <?php
-        $weight = 70;
-        $height = 1.75;
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        $weight = $_POST["weight"];
+        $height = $_POST["height"];
         $bmi = $weight / ($height * $height);
 
         echo "The weight is $weight kilograms","<br>";
         echo "The height is $height meters","<br>";
         echo "The calculated BMI is $bmi";
+    }else{
+        echo "Input Values";
+    }
     ?>
 </body>
 </html>
