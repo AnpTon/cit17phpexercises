@@ -6,11 +6,24 @@
     <title>Introduction</title>
 </head>
 <body>
+    <form method="post" action="">
+        <label>What's your name:</label><br>
+        <input name="name" type="text" required><br>
+        <label>How old are you:</label><br>
+        <input name="age" type="number" required><br>
+        <label>What's your favorite color:</label><br>
+        <input name="color" type="text" required><br>
+        <button type="submit">Submit</button>
+    </form>
     <?php
-        $name= "Andrei Nash";
-        $age = 21;
-        $color = "Purple";
+        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        $name= $_POST["name"];
+        $age = $_POST["age"];
+        $color = $_POST["color"];
         echo "Hi, I'm $name, I am $age years old, and my favorite color is $color";
+        } else {
+            echo "Input Values";
+        }
     ?>   
 </body>
 </html>

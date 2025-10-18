@@ -6,16 +6,29 @@
     <title>Document</title>
 </head>
 <body>
+    <form method="post" action="">
+        <label>What's your current Balance:</label><br>
+        <input name="balance" type="number" required><br>
+        <label>Are you withdrawing(Input 0 for No):</label><br>
+        <input name="withdraw" type="number" required><br>
+        <label>>Are you depositing(Input 0 for No):</label><br>
+        <input name="deposit" type="number" required><br>
+        <button type="submit">Calculate</button>
+    </form>
     <?php
-        $balance = 10000;
-        $deposit = 5000; 
-        $withdraw = 4000;
+        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        $balance = $_POST["balance"];
+        $deposit = $_POST["withdraw"]; 
+        $withdraw = $_POST["deposit"];
         $depositbalance = $balance + $deposit;
         $depositwithdraw = $depositbalance - $withdraw;
 
         echo "The initial balance was ₱$balance","<br>";
         echo "The deposited amount is ₱$deposit, bringing the balance to ₱$depositbalance","<br>";
         echo "The withdrawn amount is ₱$withdraw, leaving the balance at ₱$depositwithdraw";
-        ?>
+        }else{
+            echo "Input Values";
+        }
+    ?>
 </body>
 </html>
