@@ -3,15 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>BMI Calculator</title>
 </head>
 <body>
+    <h1>BMI Calculatior</h1>
     <form method="post" action="">
         <label>Your weight(kg):</label><br>
-        <input name="weight" type="number" step="0.01"><br>
+        <input name="weight" type="number" step="0.01" required><br>
         <label>Your height(meters):</label><br>
-        <input name="height" type="number" step="0.01"><br>
-        <button type="submit">Submit</button>
+        <input name="height" type="number" step="0.01" required><br>
+        <button type="submit">Calculate</button>
     </form>
     <?php
     if ($_SERVER["REQUEST_METHOD"] == "POST") {

@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Bank Account Simulation</title>
 </head>
 <body>
+    <h1>Bank Account Simulation</h1>
     <form method="post" action="">
         <label>What's your current Balance:</label><br>
         <input name="balance" type="number" required><br>

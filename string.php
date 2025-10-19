@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>String Manipulation</title>
 </head>
 <body>
+    <h1>String Manipulation</h1>
     <form method="post" action="">
         <label>Type a sentence:</label><br>
-        <input name="string" type="text"><br>
+        <input name="string" type="text" required><br>
         <button type="submit">Submit</button> <br>
     </form>
     <?php

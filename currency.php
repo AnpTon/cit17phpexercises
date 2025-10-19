@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Currency Converter</title>
 </head>
 <body>
+    <h1>Currency Converter</h1>
     <form method="post" action="">
         <label>Amount(PHP):</label><br>
-        <input name="amount" type="number" step="0.01"><br>
+        <input name="amount" type="number" step="0.01" required><br>
         <button type="submit">Submit</button> <br>
     </form>
     <?php

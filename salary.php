@@ -3,17 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Salary Calculator</title>
 </head>
 <body>
+    <h1>Salary Calculator</h1>
     <form method="post" action="">
         <label>Whats your Salary:</label><br>
-        <input name="salary" type="number" step="0.01"><br>
+        <input name="salary" type="number" step="0.01" required><br>
         <label>Whats your Allowance:</label><br>
-        <input name="allowance" type="number" step="0.01"><br>
+        <input name="allowance" type="number" step="0.01" required><br>
         <label>Any Deductions:</label><br>
-        <input name="deduction" type="number" step="0.01"><br>
-        <button type="submit">Submit</button>
+        <input name="deduction" type="number" step="0.01" required><br>
+        <button type="submit">Calculate</button>
     </form>
     <?php
     if ($_SERVER["REQUEST_METHOD"] == "POST") {

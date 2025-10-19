@@ -6,6 +6,7 @@
     <title>Introduction</title>
 </head>
 <body>
+    <h1>Introduce Yourself</h1>
     <form method="post" action="">
         <label>What's your name:</label><br>
         <input name="name" type="text" required><br>

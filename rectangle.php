@@ -3,15 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Rectangle Area and Perimeter</title>
 </head>
 <body>
+    <h1>Rectangle Area and Perimeter</h1>
     <form method="post" action="">
         <label>length:</label><br>
-        <input name="length" type="number" step="0.01"><br>
+        <input name="length" type="number" step="0.01" required><br>
         <label>width:</label><br>
-        <input name="width" type="number" step="0.01"><br>
-        <button type="submit">Submit</button> <br>
+        <input name="width" type="number" step="0.01" required><br>
+        <button type="submit">Calculate</button> <br>
     </form>
     <?php
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
